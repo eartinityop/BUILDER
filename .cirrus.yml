@@ -1,5 +1,5 @@
 env:
-    MANIFEST: https://github.com/PixelExperience/manifest.git -b thirteen
+    MANIFEST: https://android.googlesource.com/platform/manifest -b android-14.0.0_r2
     DEVICE: r5x
     OEM: realme
     DT_LINK: https://github.com/eartinity/device_realme_r5x.git
