@@ -27,10 +27,13 @@ task:
 
 
 
-  Storage-Checker_script:
+  System-Checker_script:
       - df -h
       - lsblk
       - ls -l -a -h
+      - free -h 
+      - lscpu
+      - nproc
 
   Setup-Environment_script:
       - mkdir ~/bin
