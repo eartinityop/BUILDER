@@ -23,7 +23,7 @@ task:
   container:
       image: ubuntu:22.04
       cpu: 8
-      memory: 64G
+      memory: 32G
 
 
 
