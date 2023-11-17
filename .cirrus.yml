@@ -1,5 +1,5 @@
 env:
-    MANIFEST: https://github.com/eartinity/manifest -b thirteen 
+    MANIFEST: https://android.googlesource.com/platform/manifest -b android-14.0.0_r14
     DEVICE: r5x
     OEM: realme
     DT_LINK: https://github.com/eartinity/device_realme_r5x.git
@@ -22,8 +22,8 @@ task:
   timeout_in: 240m  
   container:
       image: ubuntu:22.04
-      cpu: 8
-      memory: 32G
+      cpu: 16
+      memory: 64G
 
 
 
