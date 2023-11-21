@@ -2,11 +2,11 @@ env:
     MANIFEST: https://android.googlesource.com/platform/manifest -b android-14.0.0_r14
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/eartinity/device_realme_r5x.git
-    DT_BRANCH: pe
+    DT_LINK: https://github.com/Amritorock/android_device_realme_r5x.git
+    DT_BRANCH: Udc
     DT_PATH: device/$OEM/$DEVICE
-    VT_LINK: https://github.com/eartinity/vendor_realme_r5x.git
-    VT_BRANCH: thirteen 
+    VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
+    VT_BRANCH: Trinket 
     VT_PATH: vendor/$OEM/$DEVICE
     KT_LINK: https://github.com/Amritorock/kernel_realme_r5x.git
     KT_BRANCH: OSS
