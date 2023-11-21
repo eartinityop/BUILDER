@@ -1,9 +1,9 @@
 env:
-    MANIFEST: https://android.googlesource.com/platform/manifest -b android-14.0.0_r14
+    MANIFEST: https://github.com/Evolution-X/manifest -b udc
     DEVICE: r5x
     OEM: realme
     DT_LINK: https://github.com/Amritorock/android_device_realme_r5x.git
-    DT_BRANCH: Udc
+    DT_BRANCH: evox
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
     VT_BRANCH: Trinket 
@@ -15,7 +15,7 @@ env:
     TARGET: bacon
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
-    OUTPUT: PixelExperience*.zip
+    OUTPUT: evolution_r5x*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
@@ -29,8 +29,6 @@ task:
 
   System-Checker_script:
       - df -h
-      - lsblk
-      - ls -l -a -h
       - free -h 
       - lscpu
       - nproc
