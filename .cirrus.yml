@@ -12,7 +12,7 @@ env:
     KT_BRANCH: OSS
     PLATFORM: sm6125
     KT_PATH: kernel/$OEM/$DEVICE
-    TARGET: bacon
+    TARGET: systemimage
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
     OUTPUT: PixelExperience*.zip
@@ -66,9 +66,12 @@ task:
       - echo "============================"
       - cd ~/work
       - $EXTRA_CMD
+      - export CCACHE_DIR=/tmp/ccache
+      - export CCACHE_EXEC=$(which ccache)
       - export USE_CCACHE=1
-      - export CCACHE_EXEC=/usr/bin/ccache
-      - ccache -M 50G
+      - ccache -M 15G
+      - ccache -o compression=true
+      - ccache -z
       - . build/envsetup.sh
       - lunch $LUNCH_COMBO
       - mka $TARGET
