@@ -1,12 +1,12 @@
 env:
-    MANIFEST: https://github.com/Evolution-X/manifest -b udc
+    MANIFEST: https://github.com/PixelExperience/manifest.git -b thirteen
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/Amritorock/android_device_realme_r5x.git
-    DT_BRANCH: evox
+    DT_LINK: https://github.com/eartinity/device_realme_r5x.git
+    DT_BRANCH: pe
     DT_PATH: device/$OEM/$DEVICE
-    VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
-    VT_BRANCH: Trinket 
+    VT_LINK: https://github.com/eartinity/vendor_realme_r5x.git
+    VT_BRANCH: thirteen 
     VT_PATH: vendor/$OEM/$DEVICE
     KT_LINK: https://github.com/Amritorock/kernel_realme_r5x.git
     KT_BRANCH: OSS
@@ -15,7 +15,7 @@ env:
     TARGET: bacon
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
-    OUTPUT: evolution_r5x*.zip
+    OUTPUT: PixelExperience*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
