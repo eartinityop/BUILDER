@@ -45,7 +45,7 @@ task:
       - repo sync -j4 --force-sync --no-tags --no-clone-bundle
       - git clone https://github.com/eartinity/device_realme_r5x -b pe device/realme/r5x
       - git clone https://github.com/eartinity/vendor_realme_r5x -b thirteen vendor/realme/r5x
-      - git clone https://github.com/mcdofrenchfreis/biofrost-kernel-realme-trinket -b labs/dynamic
+      - git clone https://github.com/Amritorock/kernel_realme_r5x.git -b OSS
 
   Post-Storage-Checker_script:
       - df -h
