@@ -43,7 +43,7 @@ task:
       - git config --global user.name "pranavjha21"
       - repo init --depth=1 -u $MANIFEST
       - repo sync -j4 --force-sync --no-tags --no-clone-bundle
-      - git clone https://github.com/eartinity/device_realme_r5x -b thirteen device/realme/r5x
+      - git clone https://github.com/eartinity/device_realme_r5x -b pe device/realme/r5x
       - git clone https://github.com/eartinity/vendor_realme_r5x -b thirteen vendor/realme/r5x
       - git clone https://github.com/mcdofrenchfreis/biofrost-kernel-realme-trinket -b labs/dynamic
 
