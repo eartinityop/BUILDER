@@ -1,12 +1,12 @@
 env:
-    MANIFEST: https://github.com/PixelExperience/manifest.git -b thirteen
+    MANIFEST: https://github.com/Project-Elixir/manifest -b UNO
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/eartinity/device_realme_r5x.git
-    DT_BRANCH: pe
+    DT_LINK: https://github.com/ProjectElixir-Devices/device_realme_r5x
+    DT_BRANCH: Uno
     DT_PATH: device/$OEM/$DEVICE
-    VT_LINK: https://github.com/eartinity/vendor_realme_r5x.git
-    VT_BRANCH: thirteen 
+    VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
+    VT_BRANCH: Trinket
     VT_PATH: vendor/$OEM/$DEVICE
     KT_LINK: https://github.com/Amritorock/kernel_realme_r5x.git
     KT_BRANCH: OSS
@@ -15,7 +15,7 @@ env:
     TARGET: bacon
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
-    OUTPUT: PixelExperience*.zip
+    OUTPUT: *.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
@@ -26,6 +26,10 @@ task:
       memory: 32G
 
 
+
+  Update-Packages_script:
+      - apt update -y
+      - apt install neofetch -y
 
   System-Checker_script:
       - df -h
@@ -42,7 +46,7 @@ task:
       - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
       - chmod a+x ~/bin/repo
       - apt install -y git
-      - git clone https://github.com/eartinity/scripts.git scripts
+      - git clone https://github.com/eartinityop/BuildEnvSetup-for-Non-Root.git scripts
       - cd scripts
       - bash setup/android_build_env.sh
   
