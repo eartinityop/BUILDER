@@ -15,7 +15,7 @@ env:
     TARGET: bacon
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
-    OUTPUT: *.zip
+    OUTPUT: Project*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
