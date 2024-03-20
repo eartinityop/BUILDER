@@ -32,6 +32,7 @@ task:
       - apt install neofetch -y
 
   System-Checker_script:
+      - neofetch
       - df -h
       - free -h 
       - lscpu
