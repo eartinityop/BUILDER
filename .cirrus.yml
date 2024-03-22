@@ -14,7 +14,7 @@ env:
     KT_PATH: kernel/$OEM/$DEVICE
     TARGET: vndk
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
-    LUNCH_COMBO: aosp_$DEVICE-userdebug
+    LUNCH_COMBO: lineage_$DEVICE-userdebug
     OUTPUT: lineage*.zip
 
 task:
