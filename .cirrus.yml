@@ -12,7 +12,7 @@ env:
     KT_BRANCH: OSS
     PLATFORM: sm6125
     KT_PATH: kernel/$OEM/$DEVICE
-    TARGET: vendor
+    TARGET: vndk
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
     OUTPUT: lineage*.zip
@@ -74,7 +74,7 @@ task:
       - export USE_CCACHE=1
       - export CCACHE_EXEC=/tmp/ccache
       - ccache -M 50G
-      - bash build/envsetup.sh
+      - . build/envsetup.sh
       - lunch $LUNCH_COMBO
       - mka $TARGET
      
