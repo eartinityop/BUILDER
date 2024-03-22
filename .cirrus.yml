@@ -1,8 +1,8 @@
 env:
-    MANIFEST: https://github.com/PixelExperience/manifest -b fourteen
+    MANIFEST: https://github.com/LineageOS/android -b lineage-20.0
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/eartinityop/device_realme_r5x_14
+    DT_LINK: https://github.com/eartinityop/android_device_realme_r5x
     DT_BRANCH: Uno
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
@@ -15,7 +15,7 @@ env:
     TARGET: vendor
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
-    OUTPUT: Pixel*.zip
+    OUTPUT: lineage*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
@@ -74,14 +74,14 @@ task:
       - export USE_CCACHE=1
       - export CCACHE_EXEC=/tmp/ccache
       - ccache -M 50G
-      - . build/envsetup.sh
+      - bash build/envsetup.sh
       - lunch $LUNCH_COMBO
       - mka $TARGET
      
   Ccache_script:
-      - cd /tmp/ccache
-      - pwd 
+      - cd /tmp
       - ls
+      - cd ccache && ls
       - echo "============================"
       - echo "Uploading the Build..."
       - echo "============================"
