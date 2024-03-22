@@ -1,9 +1,9 @@
 env:
-    MANIFEST: https://github.com/LineageOS/android -b lineage-20.0
+    MANIFEST: https://github.com/PixelExperience/manifest -b fourteen
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/eartinityop/android_device_realme_r5x
-    DT_BRANCH: 13
+    DT_LINK: https://github.com/eartinityop/device_realme_r5x
+    DT_BRANCH: pe-14-wip
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
     VT_BRANCH: Trinket
@@ -14,8 +14,8 @@ env:
     KT_PATH: kernel/$OEM/$DEVICE
     TARGET: vndk
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
-    LUNCH_COMBO: lineage_$DEVICE-userdebug
-    OUTPUT: lineage*.zip
+    LUNCH_COMBO: aosp_$DEVICE-userdebug
+    OUTPUT: PixelExperience*.zip
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
