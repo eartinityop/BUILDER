@@ -12,7 +12,7 @@ env:
     KT_BRANCH: OSS
     PLATFORM: sm6125
     KT_PATH: kernel/$OEM/$DEVICE
-    TARGET: bacon
+    TARGET: vendor
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: aosp_$DEVICE-userdebug
     OUTPUT: Pixel*.zip
@@ -72,13 +72,16 @@ task:
       - cd ~/work
       - $EXTRA_CMD
       - export USE_CCACHE=1
-      - export CCACHE_EXEC=/usr/bin/ccache
+      - export CCACHE_EXEC=/tmp/ccache
       - ccache -M 50G
       - . build/envsetup.sh
       - lunch $LUNCH_COMBO
       - mka $TARGET
      
-  Upload_script:
+  Ccache_script:
+      - cd /tmp/ccache
+      - pwd 
+      - ls
       - echo "============================"
       - echo "Uploading the Build..."
       - echo "============================"
