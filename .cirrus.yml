@@ -3,7 +3,7 @@ env:
     DEVICE: r5x
     OEM: realme
     DT_LINK: https://github.com/eartinityop/android_device_realme_r5x
-    DT_BRANCH: Uno
+    DT_BRANCH: 13
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
     VT_BRANCH: Trinket
