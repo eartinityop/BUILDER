@@ -2,7 +2,7 @@ env:
     MANIFEST: https://github.com/PixelExperience/manifest -b fourteen
     DEVICE: r5x
     OEM: realme
-    DT_LINK: https://github.com/eartinityop/device_realme_r5x
+    DT_LINK: https://github.com/eartinityop/dt
     DT_BRANCH: pe-14-wip
     DT_PATH: device/$OEM/$DEVICE
     VT_LINK: https://github.com/Amritorock/vendor_realme_r5x.git
